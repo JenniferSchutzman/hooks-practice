@@ -61,13 +61,6 @@ const Counter = () => {
   //   document.title = someValue;
   // }, [someValue]);
 
-  // EXAMPLE OF USEREF
-  // const refContainer = useRef(initialValue);
-
-  // EXAMPLE OF USECALLBACK
-
-  // EXAMPLE OF CUSTOM HOOK
-
   return (
     // see that we can now refer directly to 'count' without the 'this' in the functional or the 'this.state.' of the class components
     <div>
