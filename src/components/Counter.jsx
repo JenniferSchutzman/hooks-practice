@@ -62,6 +62,7 @@ const Counter = () => {
   // }, [someValue]);
 
   // EXAMPLE OF USEREF
+  // const refContainer = useRef(initialValue);
 
   // EXAMPLE OF USECALLBACK
 
