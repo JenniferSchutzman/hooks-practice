@@ -5,6 +5,8 @@ import React, { useState } from "react";
 // BEFORE CUSTOM HOOKS - the file using the customHooks should start with "use"
 // so see "useForm.jsx" - will put together in FormAfterCustomHook
 
+// the below example demoonstartes teh other approach of useState
+// it fully sets up the event handler and state changes in one function before we break it up into separate reusable pieces
 const Form = () => {
   // useState is the setter to update the object
   const [values, setValues] = useState({ email: "", password: "" });
@@ -14,8 +16,9 @@ const Form = () => {
     // desstructuring for less code in the function
     const { name, value } = event.target;
 
-    console.log(name);
-    console.log(value);
+    // console.log(name);
+    // console.log(value);
+
     // we have to copy the values of all the states here because changes all each time
     // and then set the values of the specific ones we want to change
     // this is why we use the spread operator here
@@ -49,7 +52,6 @@ const Form = () => {
             value={values.email}
             onChange={handleChange}
           />
-          {/* {eroor message here } */}
         </div>
         <label>Password</label>
         <div>
@@ -59,7 +61,6 @@ const Form = () => {
             value={values.password}
             onChange={handleChange}
           />
-          {/* {eroor message here } */}
         </div>
         <button type="submit">Submit</button>
       </form>

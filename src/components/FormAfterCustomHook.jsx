@@ -1,18 +1,20 @@
-import React, { useState } from "react";
-// bring in the new reusable hook function
+import React from "react";
+// remove the useState
+
+// bring in the new reusable hook function -- > first go check out the new useForm function
 import useForm from "./useForm";
 
+// only function above the return now is this submit
+// before this would have been an enormous class function
+// then a smaller hooks function,
+// but now an incredibly short customHook
+
+//  destructure the values from useForm
+// the callback here is the submit, so pass it into useForm; so it will do the same behavior as the callback in the other function
+// now that these values have been brought in from our customHook, we can reuse them wherever
 const Form = () => {
-  //  destructure the values from useForm
-  // the callback here is the submit, so pass it into useForm; so it will do the same behavior as the callback in the other function
-  // now that these values have been brought in from our customHook, we can reuse them wherever
   const { handleChange, handleSubmit, values } = useForm(submit);
 
-  // only function above the return now is this submit
-  // before this would have been an enormous class function
-  // then a smaller hooks function,
-  // but now an incredibly short customHook
-  // compare the 2 files for demo
   function submit() {
     console.log("Submitted Successfully");
   }
@@ -29,7 +31,6 @@ const Form = () => {
             value={values.email}
             onChange={handleChange}
           />
-          {/* {eroor message here } */}
         </div>
         <label>Password</label>
         <div>
@@ -39,7 +40,6 @@ const Form = () => {
             value={values.password}
             onChange={handleChange}
           />
-          {/* {eroor message here } */}
         </div>
         <button type="submit">Submit</button>
       </form>

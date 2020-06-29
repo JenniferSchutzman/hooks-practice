@@ -1,3 +1,27 @@
+// import React, {Component} from 'react';
+
+// class PreviousReactComponent extends React.Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = {
+//       count: 0
+//     }
+//   }
+
+//   render() {
+//     return (
+//       <div>
+//         <p> You clicked {this.state.count} times </p>
+//         <button onClick={() => this.setState({count: this.state.count + 1})}>
+//           Click Me
+//         </button>
+//       </div>
+//     )
+//   }
+// }
+
+// export default PreviousReactComponent;
+
 import React, { useState } from "react";
 
 const Input = () => {
@@ -24,7 +48,7 @@ const Input = () => {
   // const updateFieldsTogether = (event) => {
   //   setState({
   //     ...personalInfo,
-  //     [event.target.name]: event.target.value,
+  //     name: event.target.value,
   //   });
   // };
   return (
@@ -41,7 +65,7 @@ const Input = () => {
         value={familyMembers.name}
         onChange={(event) => setFamilyMembers(event.target.value)}
       />
-      {/* <p>What is your name?</p>
+      {/* <p>What is your name (example of one object setState)?</p>
       <input value={personalInfo.name} onChange={updateFieldsTogether} />
       <p>Who are the members of your family?</p> */}
     </div>
